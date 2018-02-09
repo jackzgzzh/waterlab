@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+      	      http://www.springframework.org/schema/beans/spring-beans-3.2.xsd  
+              http://www.springframework.org/schema/aop
+              http://www.springframework.org/schema/aop/spring-aop-3.2.xsd  
+              http://www.springframework.org/schema/context
+              http://www.springframework.org/schema/context/spring-context-3.2.xsd  
+              http://www.springframework.org/schema/tx
+              http://www.springframework.org/schema/tx/spring-tx-3.2.xsd "
+	default-lazy-init="false">
+	<!-- chart -->
+	<bean id="lineChartAction" class="com.waterlab.action.chart.LineChartAction" scope="prototype">
+		<property name="finishedWaterService">
+			<ref bean="finishedWaterService" />
+		</property>
+		<property name="headerService">
+			<ref bean="headerService" />
+		</property>
+	</bean>
+	<!--  FinishedWater-->
+	<bean id="finishedWaterDao" class="com.waterlab.dao.impl.FinishedWaterDaoImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="finishedWaterService" class="com.waterlab.service.impl.FinishedWaterServiceImpl" scope="singleton">
+		<property name="finishedWaterDao">
+			<ref bean="finishedWaterDao" />
+		</property>
+	</bean>
+	<bean id="finishedWaterAction" class="com.waterlab.action.FinishedWaterAction" scope="prototype">
+		<property name="finishedWaterService">
+			<ref bean="finishedWaterService" />
+		</property>
+	</bean>
+
+	<!--Footer  -->
+	<bean id="footerDao" class="com.waterlab.dao.impl.FooterDaoImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="footerService" class="com.waterlab.service.impl.FooterServiceImpl" scope="singleton">
+		<property name="footerDao">
+			<ref bean="footerDao"></ref>
+		</property>
+	</bean>
+
+	<!--Header  -->
+	<bean id="headerDao" class="com.waterlab.dao.impl.HeaderDaoImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="headerService" class="com.waterlab.service.impl.HeaderServiceImpl" scope="singleton">
+		<property name="headerDao">
+			<ref bean="headerDao" />
+		</property>
+	</bean>
+
+	<!-- ProcessWater -->
+	<bean id="processWaterDao" class="com.waterlab.dao.impl.ProcessWaterDaoImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="processWaterService" class="com.waterlab.service.impl.ProcessWaterServiceImpl" scope="singleton">
+		<property name="processWaterDao">
+			<ref bean="processWaterDao" />
+		</property>
+	</bean>
+	<bean id="processWaterAction" class="com.waterlab.action.ProcessWaterAction" scope="prototype">
+		<property name="processWaterService">
+			<ref bean="processWaterService" />
+		</property>
+	</bean>
+	<!-- SourceWater -->
+	<bean id="sourceWaterDao" class="com.waterlab.dao.impl.SourceWaterDaoImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="sourceWaterService" class="com.waterlab.service.impl.SourceWaterServiceImpl" scope="singleton">
+		<property name="sourceWaterDao">
+			<ref bean="sourceWaterDao" />
+		</property>
+	</bean>
+	<bean id="sourceWaterAction" class="com.waterlab.action.SourceWaterAction" scope="prototype">
+		<property name="footerService">
+			<ref bean="footerService" />
+		</property>
+		<property name="headerService">
+			<ref bean="headerService" />
+		</property>
+		<property name="sourceWaterService">
+			<ref bean="sourceWaterService" />
+		</property>
+	</bean>
+	
+	<!--  User-->
+	<bean id="userDao" class="com.waterlab.dao.impl.UserDaoImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="userService" class="com.waterlab.service.impl.UserServiceImpl" scope="singleton">
+		<property name="userDao">
+			<ref bean="userDao" />
+		</property>
+	</bean>
+	<bean id="userAction" class="com.waterlab.action.UserAction" scope="prototype">
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+	</bean>
+	<bean id="userLoginAction" class="com.waterlab.action.UserLoginAction" scope="prototype">
+		<property name="userService">
+			<ref bean="userService" />
+		</property>
+	</bean>
+</beans>

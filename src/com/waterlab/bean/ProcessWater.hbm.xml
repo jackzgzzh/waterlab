@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.waterlab.bean.ProcessWater" table="ProcessWater">
+		<id name="id" type="int">
+			<column name="id"></column>
+			<generator class="native"></generator>
+		</id>
+		<property name="checkTimeProcess" type="timestamp">
+			<column name="checkTimeProcess"></column>
+		</property>
+		<property name="sourceWaterNfu" type="float">
+			<column name="sourceWaterNfu"></column>
+		</property>
+		<property name="precipitableWaterNfu" type="float">
+			<column name="precipitableWaterNfu"></column>
+		</property>
+		<property name="savedWaterNfu" type="float">
+			<column name="savedWaterNfu"></column>
+		</property>
+		<property name="filteredWaterNfu" type="float">
+			<column name="filteredWaterNfu"></column>
+		</property>
+		<property name="finishedWaterNfu" type="float">
+			<column name="finishedWaterNfu"></column>
+		</property>
+		<property name="finishedWaterHico" type="float">
+			<column name="finishedWaterHico"></column>
+		</property>
+		
+	</class>
+</hibernate-mapping>

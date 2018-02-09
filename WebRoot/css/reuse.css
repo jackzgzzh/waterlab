@@ -1,0 +1,53 @@
+
+body{
+    text-align: center;
+    margin:0;
+    padding:0;
+    background: #F9F9F9;
+    font-size: 16px;
+}
+
+
+/*
+    所有表格的表头样式
+*/
+thead tr th{
+    text-align: center;
+    font-weight: normal;
+}
+
+/*
+    单元格中的input样式
+*/
+tr td input{
+    width: 100%;
+    border:none;
+    text-align: center;
+}
+
+/*
+    ul、li及链接样式
+*/
+
+a:link,a:visited,a:hover,a:active{
+    text-decoration: none;
+}
+
+div.panel-body ul li a, div.panel-body ul li a:visited {
+    color: #000000;
+    display: block; /* 此元素将显示为块级元素，此元素前后会带有换行符 */
+    line-height: 1.35em; /* 行高 */
+    padding: 4px 20px; /* 内部填充的距离 */
+    text-decoration: none;
+    white-space: nowrap; /* 对于文本内的空白处，不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。 */
+}
+
+div.panel-body ul li a:hover {
+    background-color: #F9F9F9; /* 背景色 */
+    color: #465c71; /* 文字颜色 */
+    text-decoration: none;
+}
+
+div.panel-body ul li a:active {
+    text-decoration: none;
+}

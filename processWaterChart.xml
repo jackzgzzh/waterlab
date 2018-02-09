@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ChartBean>
+    <lable>2018-01-27</lable>
+    <processWater>
+        <finishedWaterNfu>0.32</finishedWaterNfu>
+        <finishedWaterHico>0.4</finishedWaterHico>
+    </processWater>
+</ChartBean>

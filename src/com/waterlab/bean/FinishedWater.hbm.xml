@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.waterlab.bean.FinishedWater" table="FinishedWater">
+		<id name="id" type="int">
+			<column name="id"></column>
+			<generator class="native"></generator>
+		</id>
+		<property name="fihTemperature" type="float">
+			<column name="fihTemperature"></column>
+		</property>
+		<property name="fihPh" type="float">
+			<column name="fihPh"></column>
+		</property>
+		<property name="fihChroma" type="int">
+			<column name="fihChroma"></column>
+		</property>
+		<property name="fihLookable" type="boolean">
+			<column name="fihLookable"></column>
+		</property>
+		<property name="fihSmell" type="boolean">
+			<column name="fihSmell"></column>
+		</property>
+		<property name="fihNtu" type="float">
+			<column name="fihNtu"></column>
+		</property>
+		<property name="fihChlorineDioxide" type="float">
+			<column name="fihChlorineDioxide"></column>
+		</property>
+		<property name="fihHico" type="float">
+			<column name="fihHico"></column>
+		</property>
+		<property name="fihUhr" type="float">
+			<column name="fihUhr"></column>
+		</property>
+		<property name="fihCfu" type="int">
+			<column name="fihCfu"></column>
+		</property>
+		<property name="fihTotalColiforms" type="int">
+			<column name="fihTotalColiforms"></column>
+		</property>
+		<property name="fihHeatResistant" type="int">
+			<column name="fihHeatResistant"></column>
+		</property>
+		<property name="fihCod" type="float">
+			<column name="fihCod"></column>
+		</property>		
+		<property name="fihAmmonia" type="float">
+			<column name="fihAmmonia"></column>
+		</property>
+
+	</class>
+</hibernate-mapping>

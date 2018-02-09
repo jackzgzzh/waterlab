@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProcessWater>
+    <id>36</id>
+    <checkTimeProcess>2018-01-27T16:30:00+08:00</checkTimeProcess>
+    <sourceWaterNfu>45.0</sourceWaterNfu>
+    <precipitableWaterNfu>2.98</precipitableWaterNfu>
+    <savedWaterNfu>0.38</savedWaterNfu>
+    <filteredWaterNfu>0.35</filteredWaterNfu>
+    <finishedWaterNfu>0.32</finishedWaterNfu>
+    <finishedWaterHico>0.4</finishedWaterHico>
+</ProcessWater>
