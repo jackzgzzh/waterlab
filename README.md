@@ -21,4 +21,4 @@
 </br>采用MVC模式
 
 【数据库设计】
-
+</br>![image](https://github.com/jackzgzzh/waterlab/tree/master/project_images/database.jpg)
