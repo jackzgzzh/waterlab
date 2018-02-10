@@ -22,4 +22,4 @@
 
 【数据库设计】
 </br>
-</br>![image](https://github.com/jackzgzzh/waterlab/blob/master/project_images/database.jpg)
+
