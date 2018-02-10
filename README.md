@@ -22,4 +22,13 @@
 
 【数据库设计】
 </br>
+</br>![image](https://github.com/jackzgzzh/waterlab/blob/master/project_images/database.jpg)
 
+【关于登录及拦截器】
+</br>用户分为普通用户和管理用户（通过userRole字段来区分）
+</br>普通用户（username:jackzg1,password:123）
+</br>管理用户（username:jackzg5,password:123）
+
+</br>定义了2个拦截器LoginInterceptor和MethodInterceptor,拦截器的作用：
+</br>1、只有登录用户才能进行访问
+</br>2、区分普通用户和管理用户的访问权限
