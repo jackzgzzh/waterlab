@@ -25,7 +25,8 @@
 </br>![image](https://github.com/jackzgzzh/waterlab/blob/master/project_images/database.jpg)
 
 【关于登录及拦截器】
-</br>用户分为普通用户和管理用户（通过userRole字段来区分）
+</br>输入http://localhost:3306/lab，进入登录界面
+</br>分为普通用户和管理用户（通过userRole字段来区分）
 </br>普通用户（username:jackzg1,password:123）
 </br>管理用户（username:jackzg5,password:123）
 
